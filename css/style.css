@@ -80,6 +80,7 @@ a>#logo {
 
 input[type=number],
 input[type=range],
+input[type=button],
 select {
     display: block;
     width: 100%;
