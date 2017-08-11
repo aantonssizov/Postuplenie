@@ -1,0 +1,138 @@
+/*global style  */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #D4D9DC;
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+    color: #5279a5;
+}
+
+a {
+    text-decoration: none;
+    color: #afc2d0;
+}
+
+a:hover {
+    color: #6593a3;
+}
+
+header,
+aside,
+article,
+footer,
+.vuz,
+.glav {
+    background: #002e3e;
+    border: 1px solid #3d6475;
+}
+
+
+/*header  */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+a>#logo {
+    width: auto;
+    height: auto;
+}
+
+.header-menu {
+    list-style: none;
+    margin: 0
+}
+
+.header-menu__item {
+    display: inline-block;
+    padding-right: 40px;
+    vertical-align: middle;
+}
+
+.header-menu__item a {
+    line-height: 51px;
+}
+
+.content-wrap {
+    display: flex;
+}
+
+.content {
+    padding: 15px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.filters {
+    padding: 15px;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+input[type=number],
+input[type=range],
+select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*clear  */
+
+.clear {
+    clear: both;
+}
+
+.mobile-menu-btn {
+    display: none;
+    height: 40px;
+    width: 40px;
+    background: url(../img/menu_icon.png) center no-repeat;
+    border: 0;
+    outline: none;
+    background-size: cover;
+}
+
+@media (max-width: 500px) {
+    .mobile-menu-btn {
+        display: inline-block;
+        z-index: 99;
+    }
+    .content-wrap {
+        flex-direction: column;
+    }
+    .content,
+    .filters {
+        width: 100%
+    }
+    .header-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        width: 100%;
+        background: #fff;
+    }
+    .header-menu_visible {
+        display: block;
+    }
+    .header-menu__item {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .header-menu__item a {
+        color: #666666;
+    }
+}

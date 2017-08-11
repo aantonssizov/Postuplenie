@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vuzlist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script language="JavaScript" type="text/javascript">
+        /*<![CDATA[*/
+        var s = [],
+            s_timer = [];
+
+        function show(id, h, spd) {
+            s[id] = s[id] == spd ? -spd : spd;
+            s_timer[id] = setTimeout(function() {
+                var obj = document.getElementById(id);
+                if (obj.offsetHeight + s[id] >= h) {
+                    obj.style.height = h + "px";
+                    obj.style.overflow = "auto";
+                } else if (obj.offsetHeight + s[id] <= 0) {
+                    obj.style.height = 0 + "px";
+                    obj.style.display = "none";
+                } else {
+                    obj.style.height = (obj.offsetHeight + s[id]) + "px";
+                    obj.style.overflow = "hidden";
+                    obj.style.display = "block";
+                    setTimeout(arguments.callee, 10);
+                }
+            }, 10);
+        }
+        /*]]>*/
+    </script>
+    <style>
+        ol.spisok {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"></a>
+        <ul class="header-menu">
+            <li class="header-menu__item"><a href="index.html" class="hvr-shadow-radial">Главная</a></li>
+            <li class="header-menu__item"><a href="help.html" class="hvr-shadow-radial">О нас</a></li>
+            <li class="header-menu__item"><a href="vuzlist.html" class="hvr-shadow-radial">Вузы</a></li>
+            <li class="header-menu__item"><a href="abitruent.html" class="hvr-shadow-radial">Абитруенты</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn"></button>
+
+    </header>
+    <div class="vuz">
+        <ol class="spisok">
+            <h1>Г</h1>
+            <div>
+                <li><a href="#open1" onclick="show('hidden_3',400,5)">Государственный Университет Телекоммуникаций</a>
+            </div>
+            <div id=hidden_3 style="display:none; width:450px; background-color:#f0f0f0">
+                <ol>
+                    <li>
+                        <div>
+                            <a href="#open1" onclick="show('hidden_3.1',300,5)">Специальности образовательного степени Бакалавр</a>
+                        </div>
+                        <div id=hidden_3.1 style="display:none; background-color:#f0f0f0">
+                            <ol>
+                                <li>
+                                    <div><a href="#open1" onclick="show('hidden_3.1.1',130,5)">Учебно-научный институт телекоммуникаций и информатизации</a></div>
+                                    <div id=hidden_3.1.1 style="display:none; background-color:#f0f0f0">
+                                        <ol>
+                                            <li>
+                                                <div>
+                                                    <a href="#open1" onclick="show('hidden_3.1.1.1',100,5)">Телекоммуникации и радиотехника</a>
+                                                </div>
+                                                <div id=hidden_3.1.1.1 style="display:none; background-color:#f0f0f0">
+                                                    <ul>
+                                                        <li>Телекоммуникационные системы и сети</li>
+                                                        <li>Информационно-коммуникационные технологии</li>
+                                                        <li>Мобильные телекоммуникации и системы цифрового телевидения</li>
+                                                        <li>Энергосберегающие технологии в телекоммуникациях </li>
+                                                        <li>Волоконно-оптические системы передачи</li>
+                                                        <li>Спутниковые телекоммуникации и навигационные системы</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>Инженерия программного обеспечения</li>
+                                            <li>Компьютерная инженерия</li>
+                                            <li>Компьютерные науки</li>
+                                            <li>Информационные системы и технологии</li>
+                                            <li>Системный анализ</li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><a href="#open1" onclick="show('hidden_3.1.2',130,5)">Учебно-научный институт защиты информации</a></div>
+                                    <div id=hidden_3.1.2 style="display:none; background-color:#f0f0f0">
+                                        <div>
+                                            <a href="#open1" onclick="show('hidden_3.1.2.1',130,5)">1. Кибербезопастность</a>
+                                            <div id=hidden_3.1.2.1 style="display:none; background-color:#f0f0f0">
+                                            </div>
+                                            <ul>
+                                                <li>Безопасность информационных и коммуникационных систем</li>
+                                                <li>Системы технической защиты информации</li>
+                                                <li>Управление информационной безопасностью</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><a href="#open1" onclick="show('hidden_3.1.3',200,5)">Учебно-научный институт менеджмента и предпринимательства</a></div>
+                                    <div id=hidden_3.1.3 style="display:none; background-color:#f0f0f0">
+                                        <ol>
+                                            <li>
+                                                <div>
+                                                    <a href="#open1" onclick="show('hidden_3.1.3.1',100,5)">Информационное, библиотечное и архивное дело</a>
+                                                </div>
+                                                <div id=hidden_3.1.3.1 style="display:none; background-color:#f0f0f0">
+                                                    <ul>
+                                                        <li>Документоведение и информационная деятельность</li>
+                                                        <li>Информационная аналитика и связи с общественностью</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>Социология</li>
+                                            <li>Менеджмент</li>
+                                            <li>Маркетинг</li>
+                                            <li>Экономика</li>
+                                            <li>Предпринимательство, торговля и биржевая деятельность</li>
+                                            <li>Публичное управление и администрирование</li>
+                                        </ol>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#open1" onclick="show('hidden_3.2',300,5)">Специальности образовательного степени Магистр</a>
+                        </div>
+                        <div id=hidden_3.2 style="display:none; height:200px; width:350px; background-color:#f0f0f0">
+                            <ol>
+                                <li>
+                                    <div>
+                                        <a href="#open1" onclick="show('hidden_3.2.1',140,5)">Телекоммуникации и радиотехника</a>
+                                    </div>
+                                    <div id=hidden_3.2.1 style="display:none; background-color:#f0f0f0">
+                                        <ul>
+                                            <li>Телекоммуникационные системы и сети</li>
+                                            <li>Информационная сеть связи</li>
+                                            <li>Оборудование для радио, радио и телевидение</li>
+                                            <li>Телекоммуникационных систем и сетей</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#open1" onclick="show('hidden_3.2.2',30,5)">Компьютерная инженерия</a>
+                                    </div>
+                                    <div id=hidden_3.2.2 style="display:none; background-color:#f0f0f0">
+                                        <ul>
+                                            <li>Компютерные системы и сети</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#open1" onclick="show('hidden_3.2.3',120,5)">Кибербезопасность</a>
+                                    </div>
+                                    <div id=hidden_3.2.3 style="display:none; background-color:#f0f0f0">
+                                        <ul>
+                                            <li>Безопасность информационных и коммуникационных систем</li>
+                                            <li>Системы технической защиты информации</li>
+                                            <li>Управление информационной безопасностью</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>Социология</li>
+                                <li>
+                                    <div>
+                                        <a href="#open1" onclick="show('hidden_3.2.5',60,5)">Менеджмент</a>
+                                    </div>
+                                    <div id=hidden_3.2.5 style="display:none; background-color:#f0f0f0">
+                                        <ul>
+                                            <li>Менеджмент</li>
+                                            <li>Управление инновационной деятельностью</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>Публичное управление и администрирование</li>
+                            </ol>
+                        </div>
+                    </li>
+                </ol>
+                </li>
+            </div>
+        </ol>
+        <!-- <br> -->
+
+
+
+        <ol class="spisok">
+            <h1>К</h1>
+            <div>
+                <li><a href="#open1" onclick="show('hidden_2',400,5)">Киевская Академия парикмахерского искуства</a></div>
+            <div id=hidden_2 style="display:none;width:450px;background-color:#f0f0f0">
+                <ol>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_2.1',110,5)">Высшие образование уровня бакалавр</a></div>
+                        <div id=hidden_2.1 style="display:none;background-color:#f0f0f0">
+                            <ul>Специальность:
+                                <li>"Дизайн"</li>
+                            </ul>
+                            <ul>Специализация:
+                                <li>дизайн причёски и макияжа</li>
+                                <li>дизайн стиля и визажа</li>
+                                <li>дизайн одежды</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_2.2',115,5)">Профессиональное образование</a></div>
+                        <div id=hidden_2.2 style="display:none;background-color:#f0f0f0">
+                            <ul>Специальности:
+                                <li>"Парикмахер (парикмахер-модельер)"</li>
+                                <li>"Визажист-стилист"</li>
+                                <h5>(Обучение на базе 9-11 классов)</h5>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_2.3',100,5)">Заочное отделение</a></div>
+                        <div id=hidden_2.3 style="display:none;background-color:#f0f0f0">
+                            <ul>Специальность:
+                                <li>"Дизайн"</li>
+                            </ul>
+                            <ul>Специализация:
+                                <li>бакалавр с дизайна причёски и макияжа</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_2.4',210,5)">Высшие образование уровня молодой специалист</a></div>
+                        <div id=hidden_2.4 style="display:none;background-color:#f0f0f0">
+                            <ul>Специальность:
+                                <li>"Дизайн"</li>
+                            </ul>
+                            <ul>Специализация:
+                                <li>"Парикмахерское исскуство и декоративная косметика"</li>
+                            </ul>
+                            <ul>Квалификация:
+                                <li>специалист парикмахерского исскуства и декоративной косметики</li>
+                            </ul>
+                            <h5>(Обучение на базе 9-11 классов)</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_2.5',150,5)">Курсовое отделение КАМП</a></div>
+                        <div id=hidden_2.5 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Парикмахер широкого профиля</li>
+                                <li>Визажист</li>
+                                <li>Стилист</li>
+                                <li>Мастер ногтевого сервиса</li>
+                                <li>Наращивание бровей</li>
+                                <li>Курсы повышения квалификации парикхмахеров</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+                </li>
+            </div>
+        </ol>
+
+
+
+        <ol class="spisok">
+            <h1>У</h1>
+            <div>
+                <li>
+                    <a href="#open1" onclick="show('hidden_1',400,5)">
+                        <p>Университет экономики и права "КРОК"</a>
+            </div>
+            <div id=hidden_1 style="display:none;width:450px;background-color:#f0f0f0">
+                <ol>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.1',40,5)">Туризм</a></div>
+                        <div id=hidden_1.1 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Туристичная деятельность</li>
+                                <li>Отельный бизнес</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.2',40,5)">Психология</a></div>
+                        <div id=hidden_1.2 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Юридическая психология</li>
+                                <li>Организационная психология</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Право
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.4',75,5)">Компьютерные науки</a></div>
+                        <div id=hidden_1.4 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Компьютерная сеть</li>
+                                <li>Мобильные информационные технологии</li>
+                                <li>Компьютерная графика и дизайн</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.5',60,5)">Международные отношения, общественные комуникации и региональные студии</a></div>
+                        <div id=hidden_1.5 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Информационно-аналитическая деятельность в международных отношениях</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.6',100,5)">Международные экономические отношения</a></div>
+                        <div id=hidden_1.6 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Международноя торговая деятельность</li>
+                                <li>Экспортноориентированный бизнес (английский язык преподование)</li>
+                                <li>Международный бизнес (русский язык преподование)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.7',20,5)">Экономика</a></div>
+                        <div id=hidden_1.7 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Экономика предпринимательства</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.8',80,5)">Предпринимательство, торговля и биржовая деятельность</a></div>
+                        <div id=hidden_1.8 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Управление предпринимательскими структурами на рынке недвижимости</li>
+                                <li>Предпринимательство, сервис и мода</li>
+                                <li>Цифровая экономика</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.9',80,5)">Маркетинг</a></div>
+                        <div id=hidden_1.9 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Брендинг, продвижение и продажа продукции</li>
+                                <li>Маркетинговые исследования и политика</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.10',40,5)">Учёт и налогооблажение</a></div>
+                        <div id=hidden_1.10 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Учёт, аудит и налогооблажение бизнеса</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.11',60,5)">Финансовое, банковское дело и страхование</a></div>
+                        <div id=hidden_1.11 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Финансовая безопасность бизнеса</li>
+                                <li>Банковский бизнес и страхование</li>
+                                <li>Ломбардное дело</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#open1" onclick="show('hidden_1.12',20,5)">Менеджмент</a></div>
+                        <div id=hidden_1.12 style="display:none;background-color:#f0f0f0">
+                            <ul>
+                                <li>Комерционная логистика</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+                </li>
+            </div>
+        </ol>
+
+
+
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; Антон Сизов, Вьячеслав Михащченко, Айдимирова Надежда, Тимофей Шкандюк</p>
+        <p>Поддержка: +380993868546, <a href="mailto:aantonssizov@gmail.com">aantonssizov@gmail.com -- Антон;</a></p>
+    </footer>
+
+    <script src="js/menu.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Postuplenie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"></a>
+        <ul class="header-menu">
+            <li class="header-menu__item"><a href="index.html" class="hvr-shadow-radial">Главная</a></li>
+            <li class="header-menu__item"><a href="help.html" class="hvr-shadow-radial">О нас</a></li>
+            <li class="header-menu__item"><a href="vuzlist.html" class="hvr-shadow-radial">Вузы</a></li>
+            <li class="header-menu__item"><a href="abitruent.html" class="hvr-shadow-radial">Абитруенты</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn"></button>
+
+    </header>
+    <div class="content-wrap">
+        <article class="content">
+            <h2>Как пользватьса</h2>
+            <ol>
+                <li>Выбири професию</li>
+                <li>Отформатируй критерии</li>
+                <li>нажми кнопку поиск</li>
+            </ol>
+            <select id="spec">
+            <option selected disabled value="ERROR: Вы не выбрали профессию">Выбирите профессию</option>
+        </select>
+            <input type="button" value="Поиск" onclick="rezult()">
+            <ul id="rezult">
+            </ul>
+        </article>
+
+
+        <aside class="filters">
+            <label for="town">Город</label>
+            <select id="town">
+        <option value="" >Киев</option>
+        <option value="">Винница</option>
+        <option value="">Днепро</option>
+        <option value="">Одесса</option>      
+        </select>
+            <form>
+                Собственность:<br>
+                <input type="checkbox" class="filters__state"> Государственный<br>
+                <input type="checkbox" class="filters__private"> Частный<br> Бюджет:
+                <br>
+                <input type="radio" class="filters__budget" name="filters__budget" value="yes">Да<br>
+                <input type="radio" class="filters__budget" name="filters__budget" value="don't">Нет<br>
+                <input type="radio" class="filters__budget" name="filters__budget" value="Dos no matter">Не имеет разницы<br> Сумма к оплате:<br> От
+                <input type="number" class="rezmin">грн<br> До
+                <input type="number" class="rezmax">грн<br> От
+                <input type="range" min="0" max="10000" value="0" oninput="document.querySelector('.rezmin').value = this.value;" id="min"><br> До
+                <input type="range" min="0" max="10000" value="10000" oninput="document.querySelector('.rezmax').value = this.value;" id="max">
+                <script>
+                    document.querySelector('.rezmin').value = document.getElementById('min').value;
+                    document.querySelector('.rezmax').value = document.getElementById('max').value;
+                </script>
+
+            </form>
+        </aside>
+
+    </div>
+
+
+    <footer>
+        <p>&copy; Антон Сизов, Вьячеслав Михащченко, Айдимирова Надежда, Тимофей Шкандюк</p>
+        <p>Поддержка: +380993868546, <a href="mailto:aantonssizov@gmail.com">aantonssizov@gmail.com -- Антон;</a></p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</body>
+
+</html>
