@@ -35,15 +35,38 @@ function rezult() {
         alert(rez);
     } else {
         let count = 0;
-        for (let i = 0; i < vuz.length; i++) {
-            for (let j = 0; j < vuz[i].specialnost.length; j++) {
-                if (rez === vuz[i].specialnost[j] && (state === vuz[i].own || private === vuz[i].own)) {
-                    let href = vuz[i].name.split(" ");
-                    document.getElementById("rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
-                    count++;
+        if (state === "-" && private === "-") {
+            for (let i = 0; i < vuz.length; i++) {
+                for (let j = 0; j < vuz[i].specialnost.length; j++) {
+                    if (rez === vuz[i].specialnost[j]) {
+                        let href = vuz[i].name.split(" ");
+                        document.getElementById("rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                        count++;
+                    }
+                }
+            }
+        } else if (private !== "-") {
+            for (let i = 0; i < vuz.length; i++) {
+                for (let j = 0; j < vuz[i].specialnost.length; j++) {
+                    if (rez === vuz[i].specialnost[j] && private === vuz[i].own) {
+                        let href = vuz[i].name.split(" ");
+                        document.getElementById("rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                        count++;
+                    }
+                }
+            }
+        } else if (state !== "-") {
+            for (let i = 0; i < vuz.length; i++) {
+                for (let j = 0; j < vuz[i].specialnost.length; j++) {
+                    if (rez === vuz[i].specialnost[j] && state === vuz[i].own) {
+                        let href = vuz[i].name.split(" ");
+                        document.getElementById("rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                        count++;
+                    }
                 }
             }
         }
+
         if (count == 0) {
             alert("Нету таких мест обучения");
         }
