@@ -28,9 +28,9 @@ function rezult() {
     let rez = document.querySelector("#spec").value;
     let state = (document.querySelector('.filters__state').checked) ? document.querySelector('.filters__state').value = "государственный" : document.querySelector('.filters__state').value = "-";
     let private = (document.querySelector('.filters__private').checked) ? document.querySelector('.filters__private').value = "частный" : document.querySelector('.filters__private').value = "-";
-    let budget = (document.querySelector(".filters__budget")[0].checked) ? document.querySelector('.filters__budget')[0].value = "yes" : document.querySelector('.filters__budget')[0].value = '-';
+    // let budget = (document.querySelector(".filters__budget")[0].checked) ? document.querySelector('.filters__budget')[0].value = "yes" : document.querySelector('.filters__budget')[0].value = '-';
 
-    console.log(budget);
+    // console.log(budget);
 
     if (rez == "ERROR: Вы не выбрали профессию") {
         alert(rez);
