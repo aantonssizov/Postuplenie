@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <!--AIzaSyAKGyK9AWe6wjHQRez4bN5fvrFsUv-tmeM <- api key for this project  -->
     <header>
         <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"></a>
         <ul class="header-menu">
@@ -36,8 +36,11 @@
             <option selected disabled value="ERROR: Вы не выбрали профессию">Выбирите профессию</option>
         </select>
             <input type="button" value="Поиск" onclick="rezult()">
-            <ul id="rezult">
-            </ul>
+            <div class="content__rez_flex">
+                <ul class="content__rezult"></ul>
+                <div class="content__map"></div>
+            </div>
+
         </article>
 
 
@@ -79,6 +82,7 @@
 
     <script src="js/main.js" defer></script>
     <script src="js/menu.js" defer></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKGyK9AWe6wjHQRez4bN5fvrFsUv-tmeM&callback=initMap"></script> -->
 </body>
 
 </html>
