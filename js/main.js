@@ -28,15 +28,22 @@ function rezult() {
     let rez = document.querySelector("#spec").value;
     let state = (document.querySelector('.filters__state').checked) ? document.querySelector('.filters__state').value = "государственный" : document.querySelector('.filters__state').value = "-";
     let private = (document.querySelector('.filters__private').checked) ? document.querySelector('.filters__private').value = "частный" : document.querySelector('.filters__private').value = "-";
-    // let budget = (document.querySelector(".filters__budget")[0].checked) ? document.querySelector('.filters__budget')[0].value = "yes" : document.querySelector('.filters__budget')[0].value = '-';
-
-    // console.log(budget);
+    let budget = document.querySelectorAll('.filters__budget');
+    if (budget[0].checked) {
+        budget = budget[0].value;
+    } else if (budget[1].checked) {
+        budget = budget[1].value;
+    } else if (budget[2].checked) {
+        budget = budget[2].value;
+    } else {
+        budget = "-";
+    }
 
     if (rez == "ERROR: Вы не выбрали профессию") {
         alert(rez);
     } else {
         let count = 0;
-        if (state === "-" && private === "-") {
+        if (state === "-" && private === "-" && (budget === "Dos no matter" || budget === "-")) {
             for (let i = 0; i < vuz.length; i++) {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (rez === vuz[i].specialnost[j]) {
@@ -60,6 +67,16 @@ function rezult() {
             for (let i = 0; i < vuz.length; i++) {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (rez === vuz[i].specialnost[j] && state === vuz[i].own) {
+                        let href = vuz[i].name.split(" ");
+                        document.getElementById("rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                        count++;
+                    }
+                }
+            }
+        } else if (budget === "yes" || budget === "don't") {
+            for (let i = 0; i < vuz.length; i++) {
+                for (let j = 0; j < vuz[i].specialnost.length; j++) {
+                    if (rez === vuz[i].specialnost[j] && budget === vuz[i].budget) {
                         let href = vuz[i].name.split(" ");
                         document.getElementById("rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
                         count++;
