@@ -87,6 +87,7 @@ function rezult() {
                         let href = vuz[i].name.split(" ");
                         document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
                         document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                        document.querySelector(".content__map").classList.add("content__map_style");
                         count++;
                     }
                 }
@@ -98,6 +99,7 @@ function rezult() {
                         let href = vuz[i].name.split(" ");
                         document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
                         document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                        document.querySelector(".content__map").classList.add("content__map_style");
                         count++;
                     }
                 }
@@ -109,6 +111,7 @@ function rezult() {
                         let href = vuz[i].name.split(" ");
                         document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
                         document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                        document.querySelector(".content__map").classList.add("content__map_style");
                         count++;
                     }
                 }
@@ -120,6 +123,7 @@ function rezult() {
                         let href = vuz[i].name.split(" ");
                         document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
                         document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                        document.querySelector(".content__map").classList.add("content__map_style");
                         count++;
                     }
                 }
