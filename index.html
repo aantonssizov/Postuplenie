@@ -59,8 +59,8 @@
                 <input type="radio" class="filters__budget" name="filters__budget" value="Dos no matter">Не имеет разницы<br> Сумма к оплате:<br> От
                 <input type="number" class="rezmin">грн<br> До
                 <input type="number" class="rezmax">грн<br> От
-                <input type="range" min="0" max="10000" value="0" oninput="document.querySelector('.rezmin').value = this.value;" id="min"><br> До
-                <input type="range" min="0" max="10000" value="10000" oninput="document.querySelector('.rezmax').value = this.value;" id="max">
+                <input type="range" min="0" max="25000" step="100" value="0" oninput="document.querySelector('.rezmin').value = this.value;" id="min"><br> До
+                <input type="range" min="0" max="25000" step="100" value="25000" oninput="document.querySelector('.rezmax').value = this.value;" id="max">
                 <script>
                     document.querySelector('.rezmin').value = document.getElementById('min').value;
                     document.querySelector('.rezmax').value = document.getElementById('max').value;
