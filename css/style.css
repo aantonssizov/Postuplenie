@@ -106,6 +106,9 @@ select {
     box-sizing: border-box;
 }
 
+
+/*adaptive design  */
+
 .mobile-menu-btn {
     display: none;
     height: 40px;
