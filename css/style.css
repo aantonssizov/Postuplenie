@@ -106,13 +106,6 @@ select {
     box-sizing: border-box;
 }
 
-
-/*clear  */
-
-.clear {
-    clear: both;
-}
-
 .mobile-menu-btn {
     display: none;
     height: 40px;
@@ -132,7 +125,9 @@ select {
         flex-direction: column;
     }
     .content,
-    .filters {
+    .filters,
+    .content__rezult,
+    .content__map_style {
         width: 100%
     }
     .header-menu {
