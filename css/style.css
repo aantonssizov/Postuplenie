@@ -124,7 +124,8 @@ select {
         display: inline-block;
         z-index: 99;
     }
-    .content-wrap {
+    .content-wrap,
+    .content__rez_flex {
         flex-direction: column;
     }
     .content,
