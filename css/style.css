@@ -87,7 +87,7 @@ a>#logo {
 
 .content__map_style {
     width: 75%;
-    height: 300px;
+    height: 290px;
     margin-top: 20px;
 }
 
@@ -103,6 +103,14 @@ input[type=button],
 select {
     display: block;
     width: 100%;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
 }
 

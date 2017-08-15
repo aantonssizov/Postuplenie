@@ -8,6 +8,7 @@ let vuz = [{
             lat: 50.428711,
             lng: 30.476046
         },
+        href: "http://www.dut.edu.ua/",
         specialnost: ["Телекоммуникационные системы и сети", "Информационно-коммуникационные технологии", "Мобильные телекоммуникации и системы цифрового телевидения", "Энергосберегающие технологии в телекоммуникациях", "Волоконно-оптические системы передачи", "Спутниковые телекоммуникации и навигационные системы", "Инженерия программного обеспечения", "Компьютерная инженерия", "Компьютерные науки", "Информационные системы и технологии", "Системный анализ", "Безопасность информационных и коммуникационных систем", "Системы технической защиты информации", "Управление информационной безопасностью", "Документоведение и информационная деятельность", "Информационная аналитика и связи с общественностью", "Социология", "Менеджмент", "Управление инновационной деятельностью", "Публичное управление и администрирование"]
     },
     {
@@ -20,6 +21,7 @@ let vuz = [{
             lat: 50.447224,
             lng: 30.431467
         },
+        href: "http://kapi.com.ua/",
         specialnost: ["дизайн причёски и макияжа", "дизайн стиля и визажа", "дизайн одежды", "Парикмахер (парикмахер-модельер)", "Визажист-стилист", "бакалавр с дизайна причёски и макияжа", "специалист парикмахерского исскуства и декоративной косметики", "Парикмахер широкого профиля", "Визажист", "Стилист", "Мастер ногтевого сервиса", "Наращивание бровей", "Курсы повышения квалификации парикхмахеров"]
     },
     {
@@ -32,6 +34,7 @@ let vuz = [{
             lat: 50.461129,
             lng: 30.428179
         },
+        href: "http://www.krok.edu.ua/ua/",
         specialnost: ["Туристичная деятельность", "Отельный бизнес", "Юридическая психология", "Организационная психология", "Право", "Компьютерная сеть", "Мобильные информационные технологии", "Компьютерная графика и дизайн", "Информационно-аналитическая деятельность в международных отношениях", "Международноя торговая деятельность", "Экспортноориентированный бизнес (английский язык преподование)", "Международный бизнес (русский язык преподование)", "Экономика предпринимательства", "Управление предпринимательскими структурами на рынке недвижимости", "Предпринимательство, сервис и мода", "Цифровая экономика", "Брендинг, продвижение и продажа продукции", "Маркетинговые исследования и политика", "Учёт, аудит и налогооблажение бизнеса", "Финансовая безопасность бизнеса", "Банковский бизнес и страхование", "Ломбардное дело", "Комерционная логистика"]
     }
 ];
@@ -73,16 +76,14 @@ function rezult() {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
                         if (rez === vuz[i].specialnost[j]) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML = `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
                         if (rez === vuz[i].specialnost[j]) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
@@ -96,16 +97,14 @@ function rezult() {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
                         if (rez === vuz[i].specialnost[j] && private === vuz[i].own) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML = `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
                         if (rez === vuz[i].specialnost[j] && private === vuz[i].own) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
@@ -119,16 +118,14 @@ function rezult() {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
                         if (rez === vuz[i].specialnost[j] && state === vuz[i].own) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML = `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
                         if (rez === vuz[i].specialnost[j] && state === vuz[i].own) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
@@ -142,16 +139,14 @@ function rezult() {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
                         if (rez === vuz[i].specialnost[j] && budget === vuz[i].budget) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML = `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
                         if (rez === vuz[i].specialnost[j] && budget === vuz[i].budget) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
@@ -165,15 +160,13 @@ function rezult() {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
                         if ((rez === vuz[i].specialnost[j] && (minPrice >= vuz[i].minPrice && maxPrice <= vuz[i].maxPrice)) || (rez === vuz[i].specialnost[j] && minPrice >= vuz[i].minPrice)) {
-                            let href = vuz[i].name.split(" ");
-                            document.querySelector(".content__rezult").innerHTML = `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                            document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         } else {
                             if ((rez === vuz[i].specialnost[j] && (minPrice >= vuz[i].minPrice && maxPrice <= vuz[i].maxPrice)) || (rez === vuz[i].specialnost[j] && minPrice >= vuz[i].minPrice)) {
-                                let href = vuz[i].name.split(" ");
-                                document.querySelector(".content__rezult").innerHTML += `<li><a href="vuzlist.html#${href.join("")}">${vuz[i].name}</li>`;
+                                document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
                                 document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                                 document.querySelector(".content__map").classList.add("content__map_style");
                                 count++;
