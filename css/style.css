@@ -26,7 +26,8 @@ aside,
 article,
 footer,
 .vuz,
-.glav {
+.glav,
+.article {
     background: #002e3e;
     border: 1px solid #3d6475;
 }
@@ -106,6 +107,47 @@ select {
     box-sizing: border-box;
 }
 
+.article {
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.article-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.article-how:nth-child(2) {
+    text-align: right;
+}
+
+.article-how:last-child {
+    margin-bottom: 15px;
+}
+
+.article-how {
+    padding: 15px;
+    margin: 0;
+    width: 700px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.article-how__img {
+    border: 1px solid #3d6475;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -161,5 +203,9 @@ select {
     }
     .header-menu__item a {
         color: #666666;
+    }
+    .article-how {
+        width: 500px;
+        height: 300px;
     }
 }
