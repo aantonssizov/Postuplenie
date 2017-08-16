@@ -98,14 +98,14 @@ function rezult() {
                     if (i % 1 === 0) {
                         if (rez === vuz[i].specialnost[j] && private === vuz[i].own) {
                             document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                            document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
                         if (rez === vuz[i].specialnost[j] && private === vuz[i].own) {
                             document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                            document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
@@ -119,14 +119,14 @@ function rezult() {
                     if (i % 1 === 0) {
                         if (rez === vuz[i].specialnost[j] && state === vuz[i].own) {
                             document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                            document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
                         if (rez === vuz[i].specialnost[j] && state === vuz[i].own) {
                             document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                            document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
@@ -140,14 +140,14 @@ function rezult() {
                     if (i % 1 === 0) {
                         if (rez === vuz[i].specialnost[j] && budget === vuz[i].budget) {
                             document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                            document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
                         if (rez === vuz[i].specialnost[j] && budget === vuz[i].budget) {
                             document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                            document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
@@ -161,15 +161,15 @@ function rezult() {
                     if (i % 1 === 0) {
                         if ((rez === vuz[i].specialnost[j] && (minPrice >= vuz[i].minPrice && maxPrice <= vuz[i].maxPrice)) || (rez === vuz[i].specialnost[j] && minPrice >= vuz[i].minPrice)) {
                             document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                            document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         } else {
                             if ((rez === vuz[i].specialnost[j] && (minPrice >= vuz[i].minPrice && maxPrice <= vuz[i].maxPrice)) || (rez === vuz[i].specialnost[j] && minPrice >= vuz[i].minPrice)) {
                                 document.querySelector(".content__rezult").innerHTML = `<li><a href="${vuz[i].href}" target="_blanck">${vuz[i].name}</li>`;
-                                document.querySelector(".content__map").innerHTML = `<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
-                                document.querySelector(".content__map").classList.add("content__map_style");
-                                count++;
+                            document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
+                            document.querySelector(".content__map").classList.add("content__map_style");
+                            count++;
                             }
                         }
 
