@@ -71,6 +71,7 @@ a>#logo {
     padding: 15px;
     width: 70%;
     box-sizing: border-box;
+    min-height: 500px;
 }
 
 .content__rez_flex {
@@ -88,7 +89,8 @@ a>#logo {
 
 .content__map_style {
     width: 75%;
-    height: 290px;
+    min-height: 300px;
+    max-height: 400px;
     margin-top: 20px;
 }
 
@@ -149,11 +151,16 @@ select {
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer__about-us {
+    margin-bottom: 5px;
+}
+
+.footer__about-us {
+    margin-top: 0;
 }
 
 
