@@ -149,7 +149,7 @@ select {
     height: 200px;
     box-sizing: border-box
 }
-/*footer*/
+
 .footer {
     text-align: center;
     padding: 15px;
