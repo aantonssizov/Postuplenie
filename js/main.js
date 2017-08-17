@@ -64,13 +64,11 @@ function rezult() {
     let maxPrice = +document.querySelector(".rezmax").value;
 
     console.log(minPrice + " " + maxPrice);
-
-
-
+    let count = 0;
     if (rez == "ERROR: Вы не выбрали профессию") {
         alert(rez);
     } else {
-        let count = 0;
+
         if (state === "-" && private === "-" && (budget === "Dos no matter" || budget === "-") && (minPrice === 0 && maxPrice === 25000)) {
             for (let i = 0; i < vuz.length; i++) {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
@@ -198,9 +196,11 @@ function rezult() {
                 }
             }
 
-            if (count == 0) {
-                alert("Нету таких мест обучения");
-            }
         }
+    }
+    console.log(count);
+    if (count == 0) {
+        console.log(count);
+        alert("Нету таких мест обучения");
     }
 }
