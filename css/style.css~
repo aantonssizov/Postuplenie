@@ -9,16 +9,16 @@ body {
 body {
     background: #D4D9DC;
     font-family: monaco, Consolas, "Lucida Console", monospace;
-    color: #5279a5;
+    color: #FFBF00;
 }
 
 a {
     text-decoration: none;
-    color: #afc2d0;
+    color: #FF9200;
 }
 
 a:hover {
-    color: #6593a3;
+    color: #3C3CF1;
 }
 
 header,
@@ -149,6 +149,9 @@ select {
     height: 200px;
     box-sizing: border-box
 }
+
+
+/*footer*/
 
 .footer {
     text-align: center;
