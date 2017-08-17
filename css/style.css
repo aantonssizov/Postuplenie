@@ -7,29 +7,16 @@ body {
 body {
 
     font-family: monaco, Consolas, "Lucida Console", monospace;
-<<<<<<< HEAD
     color: #f8f7fc;
-=======
-    color: #FFBF00;
->>>>>>> 6f0914e201d5aa53156259fc3aa39190c72d58ee
 }
 a {
     text-decoration: none;
-<<<<<<< HEAD
     color: #6a90a9;
-	
-=======
-    color: #FF9200;
->>>>>>> 6f0914e201d5aa53156259fc3aa39190c72d58ee
+
 }
 /*#f8f7fc*/
 a:hover {
-<<<<<<< HEAD
     color: #406378;
-=======
-    color: #3C3CF1;
-}
->>>>>>> 6f0914e201d5aa53156259fc3aa39190c72d58ee
 
 }
 header,
@@ -178,10 +165,7 @@ input[type=number] {
     height: 200px;
     box-sizing: border-box
 }
-
-
 /*footer*/
-
 .footer {
     text-align: center;
     padding: 15px;
@@ -272,10 +256,4 @@ color:#c5d1dd;
         width: 500px;
         height: 300px;
     }
-<<<<<<< HEAD
 }
-=======
-}
-
-/*the end*/
->>>>>>> 6f0914e201d5aa53156259fc3aa39190c72d58ee
