@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -35,7 +35,12 @@
     </script>
     <style>
         ol.spisok {
-            display: inline-block;
+            display: block;
+        }
+        .filters {
+            position: fixed;
+            right: 0;
+            background: #406378;
         }
     </style>
 </head>
@@ -54,6 +59,24 @@
 
     </header>
     <div class="vuz">
+        <div class="filters"><label for="town">Город:</label>
+            <select id="town" disabled>
+                <option value="" >Киев</option>
+                <option value="">Винница</option>
+                <option value="">Днепр</option>
+                <option value="">Одесса</option>
+            </select>
+            <hr>
+            Собственность:<br>
+            <input type="checkbox" class="filters__state" disabled> Государственный<br>
+            <input type="checkbox" class="filters__private" disabled> Частный<br>
+            <hr>
+            Бюджет:
+            <br>
+            <input type="radio" class="filters__budget" name="filters__budget" value="yes" disabled>Да<br>
+            <input type="radio" class="filters__budget" name="filters__budget" value="don't" disabled>Нет<br>
+            <input type="radio" class="filters__budget" name="filters__budget" value="Dos no matter" disabled>Не имеет разницы
+        </div>
         <ol class="spisok">
             <h1>Г</h1>
             <div>
@@ -398,7 +421,7 @@
 
     <footer class="footer">
         <p class="footer__about-us">&copy; Антон Сизов, Вьячеслав Михащченко, Айдимирова Надежда, Тимофей Шкандюк</p>
-        <p class="footer__about-us">Поддержка: +380993868546, <a href="mailto:aantonssizov@gmail.com">aantonssizov@gmail.com</a> -- Антон;</p>
+        <p class="footer__about-us">Поддержка: +380993868546, <a href="mailto:aantonssizov@gmail.com">aantonssizov@gmail.com</a> - Антон</p>
     </footer>
 
     <script src="js/menu.js" defer></script>
