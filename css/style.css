@@ -46,6 +46,7 @@ header {
     padding: 0 10px;
     box-sizing: border-box;
 }
+
 .center {
     display: flex;
     justify-content: space-between;
@@ -124,45 +125,6 @@ input[type=number] {
     width: 37%;
     display: inline-block;
     margin-top: 4px;
-}
-.article {
-    padding: 5px;
-    text-align: center;
-    box-sizing: border-box;
-	background-color: #f8f7fc;
-	color: #002e43;
-}
-.article-content {
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-	background-color: #f8f7fc;
-	color: #002e43;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
-    box-sizing: border-box;
-}
-.article-how:nth-child(2) {
-    text-align: right;
-}
-.article-how:last-child {
-    margin-bottom: 15px;
-}
-.article-how {
-    padding: 15px;
-    margin: 0;
-    width: 700px;
-    height: 300px;
-    box-sizing: border-box;
-}
-.article-how__img {
-    border: 1px solid #3d6475;
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    box-sizing: border-box
 }
 /*footer*/
 .footer {

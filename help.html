@@ -8,39 +8,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Postuplenie</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #c3dfe2;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+        }
+        .article {
+            padding: 5px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: #c3dfe2;
+            color: #002e43;
+            height: calc(100vh - 100px);
+        }
+        .article-content {
+            max-width: 1024px;
+            margin: 0 auto;
+            /*display: flex;*/
+            background-color: #c3dfe2;
+            color: #002e43;
+            text-align: center;
+            box-sizing: border-box;
+            min-height: calc(100vh - 200px);
+            margin-bottom: 90px;
+        }
+        .article-how:nth-child(2) {
+            text-align: center;
+        }
+        .article-how:last-child {
+            /*margin-bottom: 15px;*/
+        }
+        .article-how {
+            padding: 15px;
+            margin: 0;
+            width: 700px;
+            height: 300px;
+            box-sizing: border-box;
+        }
+        .article-how__img {
+            border: 1px solid #3d6475;
+            border-radius: 100%;
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box
+        }
+        .margin-top {
+            margin-top: 100px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+<header>
+    <div class="center">
         <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"></a>
         <ul class="header-menu">
             <li class="header-menu__item"><a href="index.html" class="hvr-shadow-radial">Главная</a></li>
             <li class="header-menu__item"><a href="help.html" class="hvr-shadow-radial">О нас</a></li>
             <li class="header-menu__item"><a href="vuzlist.html" class="hvr-shadow-radial">Вузы</a></li>
-            <li class="header-menu__item"><a href="abitruent.html" class="hvr-shadow-radial">Абитруенты</a></li>
+            <li class="header-menu__item"><a href="abitruent.html" class="hvr-shadow-radial">Абитуренту!</a></li>
         </ul>
+    </div>
+</header>
 
-        <button class="mobile-menu-btn"></button>
-
-    </header>
-
-    <div class="article">
-        <h2>Как пользоваться?</h2>
+    <div class="article content" style="width: 100%; background: #c3dfe2;">
+        <h2 class="margin-top">Как пользоваться?</h2>
         <div class="article-content">
             <div class="article-how">
-                <h3 class="article-how__h1">Lorem ipsum.</h3>
+                <h3 class="article-how__h1">Выбири професию</h3>
 
-                <p><img class="article-how__img" src="img/first.png" alt="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus fuga iste nisi nulla tempora.</p>
+                <p><img class="article-how__img" src="img/first.png" alt="first">Нажмите на "Выбирите професию" и выбири спецыаальность</p>
             </div>
             <div class="article-how">
-                <h3 class="article-how__h1">Lorem ipsum.</h3>
+                <h3 class="article-how__h1">Нажми кнопку поиск</h3>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus fuga iste nisi nulla tempora.<img class="article-how__img" src="img/second.png" alt="second"></p>
+                <p>Нажми Кнопку "Поиск" и тебе покажутца все Ученичуские заведения которые есть мкарта на которой будут показаны ученические заведения</p>
+                <img class="article-how__img" src="img/second.png" alt="second">
             </div>
             <div class="article-how">
-                <h3 class="article-how__h1">Lorem ipsum.</h3>
+                <h3 class="article-how__h1">Если нужно отформатируй критерии</h3>
 
-                <p><img class="article-how__img" src="img/third.png" alt="fird">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus fuga iste nisi nulla tempora.</p>
+                <p><img class="article-how__img" src="img/third.png" alt="third">Если необходимо измените критерии и потом опять нажми кнопку поиск</p>
             </div>
         </div>
     </div>
