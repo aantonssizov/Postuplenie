@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Postuplenie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"></a>
+            <ul class="header-menu">
+                <li class="header-menu__item"><a href="index.html" class="hvr-shadow-radial">Главная</a></li>
+                <li class="header-menu__item"><a href="help.html" class="hvr-shadow-radial">О нас</a></li>
+                <li class="header-menu__item"><a href="vuzlist.html" class="hvr-shadow-radial">Вузы</a></li>
+                <li class="header-menu__item"><a href="abitruent.html" class="hvr-shadow-radial">Абитуренту!</a></li>
+            </ul>
+        </div>
+
+        <button class="mobile-menu-btn"></button>
+
+    </header>
+    <div class="content-wrap">
+        <article class="content">
+            <h2>Как пользоваться?</h2>
+            <ol>
+                <li>Выбери профессию&darr;</li>
+                <li>Нажми кнопку "Поиск"&darr;&darr;</li>
+                <li>Если нужно отредактируй критерии справа&rarr;</li>
+            </ol>
+            <select id="spec">
+            <option selected disabled value="ERROR: Вы не выбрали профессию">Выберите профессию</option>
+        </select>
+            <div class="butcenter">
+                <input type="button" value="Поиск" onclick="rezult()">
+            </div>
+            <div class="content__rez_flex">
+                <ul class="content__rezult"></ul>
+                <div class="content__map"></div>
+            </div>
+
+        </article>
+
+
+        <aside class="filters">
+            <label for="town">Город:</label>
+            <select id="town">
+                <option value="" >Киев</option>
+                <option value="">Винница</option>
+                <option value="">Днепр</option>
+            <option value="">Одесса</option>
+            </select>
+            <form>
+                <hr>
+                Собственность:<br>
+                <input type="checkbox" class="filters__state"> Государственный<br>
+                <input type="checkbox" class="filters__private"> Частный<br>
+                <hr>
+                Бюджет:
+                <br>
+                <input type="radio" class="filters__budget" name="filters__budget" value="yes">Да<br>
+                <input type="radio" class="filters__budget" name="filters__budget" value="don't">Нет<br>
+                <input type="radio" class="filters__budget" name="filters__budget" value="Dos no matter">Не имеет разницы<br>
+                <hr>
+                Сумма к оплате:<br> От: <span class="rigth">До:<br></span>
+                <input type="number" class="rezmin" oninput="document.querySelector('#min').value = this.value;">грн
+                <input type="number" class="rezmax" oninput="document.querySelector('#max').value = this.value;">грн<br> От
+                <input type="range" min="0" max="25000" step="100" value="0" oninput="document.querySelector('.rezmin').value = this.value;" id="min"> До
+                <input type="range" min="0" max="25000" step="100" value="25000" oninput="document.querySelector('.rezmax').value = this.value;" id="max">
+                <script>
+                    document.querySelector('.rezmin').value = document.getElementById('min').value;
+                    document.querySelector('.rezmax').value = document.getElementById('max').value;
+                </script>
+
+            </form>
+        </aside>
+
+    </div>
+
+
+    <footer class="footer">
+        <p class="footer__about-us">&copy; Антон Сизов, Вьячеслав Михащченко, Айдимирова Надежда, Тимофей Шкандюк</p>
+        <p class="footer__about-us">Поддержка: +380993868546, <a href="mailto:aantonssizov@gmail.com">aantonssizov@gmail.com</a> - Антон</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</body>
+
+</html>

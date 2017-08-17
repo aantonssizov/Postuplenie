@@ -81,7 +81,7 @@ a>#logo {
     width: 70%;
     box-sizing: border-box;
     height: calc(100vh - 100px);
-    background-color: #f8f7fc;
+    background-color: #c3dfe2;
 	color: #002e43;
 }
 .content__rez_flex {
