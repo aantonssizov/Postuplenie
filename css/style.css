@@ -210,9 +210,9 @@ color:#c5d1dd;
         padding: 10px 0;
         text-align: center;
     }
-	.header-menu__item:first-child {
-    	margin-left: inherit;
-	}
+.header-menu__item:first-child {
+margin-left: inherit;
+}
     .header-menu__item a {
         color: #666666;
     }
