@@ -48,7 +48,7 @@ for (let i = 0; i < vuz.length; i++) {
 function rezult() {
     let rez = document.querySelector("#spec").value;
     let state = (document.querySelector('.filters__state').checked) ? document.querySelector('.filters__state').value = "государственный" : document.querySelector('.filters__state').value = "-";
-    let private = (document.querySelector('.filters__private').checked) ? document.querySelector('.filters__private').value = "частный" : document.querySelector('.filters__private').value = "-";
+    let _private = (document.querySelector('.filters__private').checked) ? document.querySelector('.filters__private').value = "частный" : document.querySelector('.filters__private').value = "-";
     let budget = document.querySelectorAll('.filters__budget');
     if (budget[0].checked) {
         budget = budget[0].value;
@@ -69,7 +69,7 @@ function rezult() {
         alert(rez);
     } else {
 
-        if (state === "-" && private === "-" && (budget === "Dos no matter" || budget === "-") && (minPrice === 0 && maxPrice === 25000)) {
+        if (state === "-" && _private === "-" && (budget === "Dos no matter" || budget === "-") && (minPrice === 0 && maxPrice === 25000)) {
             for (let i = 0; i < vuz.length; i++) {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
@@ -90,18 +90,18 @@ function rezult() {
                     }
                 }
             }
-        }else if (private !== "-" && state !== "-"){
+        } else if (_private !== "-" && state !== "-") {
             for (let i = 0; i < vuz.length; i++) {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
-                        if (rez === vuz[i].specialnost[j] && (state === vuz[i].own || private === vuz[i].own)) {
+                        if (rez === vuz[i].specialnost[j] && (state === vuz[i].own || _private === vuz[i].own)) {
                             document.querySelector(".content__rezult").innerHTML = `<li>${vuz[i].name}<a href="${vuz[i].href}" target="_blanck"><br>(Перейти на сайт Учебного Заведения)</a></li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
-                        if (rez === vuz[i].specialnost[j] && (state === vuz[i].own || private === vuz[i].own)) {
+                        if (rez === vuz[i].specialnost[j] && (state === vuz[i].own || _private === vuz[i].own)) {
                             document.querySelector(".content__rezult").innerHTML = `<li>${vuz[i].name}<a href="${vuz[i].href}" target="_blanck"><br>(Перейти на сайт Учебного Заведения)</a></li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
@@ -111,18 +111,18 @@ function rezult() {
 
                 }
             }
-    } else if (private !== "-") {
+        } else if (_private !== "-") {
             for (let i = 0; i < vuz.length; i++) {
                 for (let j = 0; j < vuz[i].specialnost.length; j++) {
                     if (i % 1 === 0) {
-                        if (rez === vuz[i].specialnost[j] && private === vuz[i].own) {
+                        if (rez === vuz[i].specialnost[j] && _private === vuz[i].own) {
                             document.querySelector(".content__rezult").innerHTML = `<li>${vuz[i].name}<a href="${vuz[i].href}" target="_blanck"><br>(Перейти на сайт Учебного Заведения)</a></li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");
                             count++;
                         }
                     } else {
-                        if (rez === vuz[i].specialnost[j] && private === vuz[i].own) {
+                        if (rez === vuz[i].specialnost[j] && _private === vuz[i].own) {
                             document.querySelector(".content__rezult").innerHTML = `<li>${vuz[i].name}<a href="${vuz[i].href}" target="_blanck"><br>(Перейти на сайт Учебного Заведения)</a></li>`;
                             document.querySelector(".content__map").innerHTML = `<iframe class="content__map__iframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtEUivAyVAwTAW2zMC9IsdJbIlV72NDko&q=${vuz[i].pos.lat},${vuz[i].pos.lng}&zoom=13"></iframe>`;
                             document.querySelector(".content__map").classList.add("content__map_style");

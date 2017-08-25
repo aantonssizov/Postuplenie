@@ -57,18 +57,16 @@
             <option value="">Одесса</option>
             </select>
             <form>
-                <hr>
-                Собственность:<br>
+                <hr> Собственность:
+                <br>
                 <input type="checkbox" class="filters__state"> Государственный<br>
                 <input type="checkbox" class="filters__private"> Частный<br>
-                <hr>
-                Бюджет:
+                <hr> Бюджет:
                 <br>
                 <input type="radio" class="filters__budget" name="filters__budget" value="yes">Да<br>
                 <input type="radio" class="filters__budget" name="filters__budget" value="don't">Нет<br>
                 <input type="radio" class="filters__budget" name="filters__budget" value="Dos no matter">Не имеет разницы<br>
-                <hr>
-                Сумма к оплате:<br> От: <span class="rigth">До:<br></span>
+                <hr> Сумма к оплате:<br> От: <span class="rigth">До:<br></span>
                 <input type="number" class="rezmin" oninput="document.querySelector('#min').value = this.value;">грн
                 <input type="number" class="rezmax" oninput="document.querySelector('#max').value = this.value;">грн<br> От
                 <input type="range" min="0" max="25000" step="100" value="0" oninput="document.querySelector('.rezmin').value = this.value;" id="min"> До
@@ -89,8 +87,8 @@
         <p class="footer__about-us">Поддержка: <a href="mailto:aantonssizov@gmail.com">aantonssizov@gmail.com</a> - Антон</p>
     </footer>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/menu.js" defer></script>
+    <script src="fnl_js/main.js" defer></script>
+    <script src="fnl_js/menu.js" defer></script>
 </body>
 
 </html>
